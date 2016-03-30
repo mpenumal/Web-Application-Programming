@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+  <display-name>Booktown Servlet</display-name>
+  <description>DAO Sample for ser422</description>
+  
+  <servlet>
+    <servlet-name>Booktown</servlet-name>
+    <servlet-class>edu.asupoly.ser422.servlets.BooktownServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Booktown</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>DefaultView</servlet-name>
+	<servlet-class>edu.asupoly.ser422.servlets.DefaultViewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>DefaultView</servlet-name>
+	<url-pattern>/default_view</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>DeleteView</servlet-name>
+	<servlet-class>edu.asupoly.ser422.servlets.DeleteViewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>DeleteView</servlet-name>
+	<url-pattern>/delete_view</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>CreateView</servlet-name>
+	<servlet-class>edu.asupoly.ser422.servlets.CreateViewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>CreateView</servlet-name>
+	<url-pattern>/create_view</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>ErrorView</servlet-name>
+	<servlet-class>edu.asupoly.ser422.servlets.ErrorViewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>ErrorView</servlet-name>
+	<url-pattern>/error_view</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>ExceptionView</servlet-name>
+	<servlet-class>edu.asupoly.ser422.servlets.ExceptionViewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>ExceptionView</servlet-name>
+	<url-pattern>/exception_view</url-pattern>
+  </servlet-mapping>
+</web-app>

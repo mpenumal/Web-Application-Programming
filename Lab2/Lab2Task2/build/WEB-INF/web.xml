@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE web-app
+	PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+"http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app  xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+version="3.1" metadata-complete="true">
+	<welcome-file-list>
+		<welcome-file>get_home</welcome-file>
+	</welcome-file-list>
+	<display-name>Lab2Task2</display-name>
+	<description>Servlet Implementation</description>
+	
+	<servlet>
+		<servlet-name>Lab2Task1Part2</servlet-name>
+		<servlet-class>InformationCapturePost</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Lab2Task1Part2</servlet-name>
+		<url-pattern>/post_coder</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Lab2Task1Part3</servlet-name>
+		<servlet-class>InformationCaptureGet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Lab2Task1Part3</servlet-name>
+		<url-pattern>/get_coders</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Lab2Task2Part11</servlet-name>
+		<servlet-class>SessionStateGet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Lab2Task2Part11</servlet-name>
+		<url-pattern>/get_home</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Lab2Task2Part12</servlet-name>
+		<servlet-class>SessionStateStore</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Lab2Task2Part12</servlet-name>
+		<url-pattern>/post_login</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Lab2Task2Part21</servlet-name>
+		<servlet-class>InformationInput1</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Lab2Task2Part21</servlet-name>
+		<url-pattern>/InformationInput1</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Lab2Task2Part22</servlet-name>
+		<servlet-class>InformationInput2</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Lab2Task2Part22</servlet-name>
+		<url-pattern>/InformationInput2</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Lab2Task2Part23</servlet-name>
+		<servlet-class>InformationInput3</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Lab2Task2Part23</servlet-name>
+		<url-pattern>/InformationInput3</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Lab2Task2Part24</servlet-name>
+		<servlet-class>InformationInput4</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Lab2Task2Part24</servlet-name>
+		<url-pattern>/InformationInput4</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Lab2Task2Part25</servlet-name>
+		<servlet-class>InformationInput5</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Lab2Task2Part25</servlet-name>
+		<url-pattern>/InformationInput5</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Lab2Task2Part26</servlet-name>
+		<servlet-class>InformationCaptureCancel</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Lab2Task2Part26</servlet-name>
+		<url-pattern>/InformationCaptureCancel</url-pattern>
+	</servlet-mapping>
+	
+	<session-config>
+		<session-timeout>20</session-timeout>
+	</session-config>
+</web-app>

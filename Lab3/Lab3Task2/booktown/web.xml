@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+  <welcome-file-list>
+	<welcome-file>booktown</welcome-file>
+  </welcome-file-list>
+  <display-name>Booktown Servlet</display-name>
+  <description>DAO Sample for ser422</description>
+  
+  <servlet>
+    <servlet-name>Booktown</servlet-name>
+    <servlet-class>edu.asupoly.ser422.servlets.BooktownServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Booktown</servlet-name>
+    <url-pattern>/booktown</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>DefaultView</servlet-name>
+	<servlet-class>edu.asupoly.ser422.servlets.DefaultViewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>DefaultView</servlet-name>
+	<url-pattern>/default_view</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>DeleteView</servlet-name>
+	<servlet-class>edu.asupoly.ser422.servlets.DeleteViewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>DeleteView</servlet-name>
+	<url-pattern>/delete_view</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>CreateView</servlet-name>
+	<servlet-class>edu.asupoly.ser422.servlets.CreateViewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>CreateView</servlet-name>
+	<url-pattern>/create_view</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>ErrorView</servlet-name>
+	<servlet-class>edu.asupoly.ser422.servlets.ErrorViewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>ErrorView</servlet-name>
+	<url-pattern>/error_view</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>ExceptionView</servlet-name>
+	<servlet-class>edu.asupoly.ser422.servlets.ExceptionViewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	<servlet-name>ExceptionView</servlet-name>
+	<url-pattern>/exception_view</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>GetBookTownInfo</servlet-name>
+    <servlet-class>edu.asupoly.ser422.servlets.GetBooktownServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetBookTownInfo</servlet-name>
+    <url-pattern>/get_booktown_info</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AuthorPrimaryKeyView</servlet-name>
+    <servlet-class>edu.asupoly.ser422.servlets.AuthorPrimaryKeyViewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AuthorPrimaryKeyView</servlet-name>
+    <url-pattern>/author_primary_key_view</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AuthorPage</servlet-name>
+    <servlet-class>edu.asupoly.ser422.servlets.AuthorPageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AuthorPage</servlet-name>
+    <url-pattern>/author_page</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AuthorPageView</servlet-name>
+    <servlet-class>edu.asupoly.ser422.servlets.AuthorPageViewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AuthorPageView</servlet-name>
+    <url-pattern>/author_page_view</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>AuthorPageDelete</servlet-name>
+    <servlet-class>edu.asupoly.ser422.servlets.AuthorPageDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AuthorPageDelete</servlet-name>
+    <url-pattern>/author_page_delete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>BookPage</servlet-name>
+    <servlet-class>edu.asupoly.ser422.servlets.BookPageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BookPage</servlet-name>
+    <url-pattern>/book_page</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>BookPageView</servlet-name>
+    <servlet-class>edu.asupoly.ser422.servlets.BookPageViewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BookPageView</servlet-name>
+    <url-pattern>/book_page_view</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>BookPageDelete</servlet-name>
+    <servlet-class>edu.asupoly.ser422.servlets.BookPageDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BookPageDelete</servlet-name>
+    <url-pattern>/book_page_delete</url-pattern>
+  </servlet-mapping>
+</web-app>

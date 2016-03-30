@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Information Accumulator</title>
+	</head>
+	<body>
+		<form name="Information Accumulator" method="post" action="post_coder">
+			<h2>Information Accumulator</h2>
+			<br>
+			First name:
+			<input type="text" id="firstname" name="firstname">
+			Last name:
+			<input type="text" id="lastname" name="lastname">
+			<br><br>
+			Known Languages (add comma seperated values):
+			<input id="language" type="text" name="language"><br>
+			<br>
+			Available days of the week:
+			<input type="checkbox" name="weekday" value="None" checked disabled style="display:none;"><br>
+			<input type="checkbox" name="weekday" value="Monday" > Monday
+			<input type="checkbox" name="weekday" value="Tuesday"> Tuesday
+			<input type="checkbox" name="weekday" value="Wednesday"> Wednesday
+			<input type="checkbox" name="weekday" value="Thursday"> Thursday
+			<input type="checkbox" name="weekday" value="Friday"> Friday
+			<input type="checkbox" name="weekday" value="Saturday"> Saturday
+			<input type="checkbox" name="weekday" value="Sunday"> Sunday
+			<br><br>
+			Accesible Location:<br>
+			<input type="radio" name="location" value="Downtown" checked="checked"> Downtown
+			<input type="radio" name="location" value="Mesa"> Mesa
+			<input type="radio" name="location" value="Tempe"> Tempe
+			<input type="radio" name="location" value="Tucson"> Tucson
+			<input type="radio" name="location" value="Scottsdale"> Scottsdale
+			<input type="radio" name="location" value="Sedona"> Sedona
+			<br><br>
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+</html>

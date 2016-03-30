@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE web-app
+	PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+"http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app  xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+version="3.1" metadata-complete="true">
+	<welcome-file-list>
+		<welcome-file>InformationCaptureForm.html</welcome-file>
+	</welcome-file-list>
+	<display-name>Lab2Task1</display-name>
+	<description>Servlet doPost Implementation</description>
+	<servlet>
+		<servlet-name>Lab2Task1Part2</servlet-name>
+		<servlet-class>InformationCapturePost</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Lab2Task1Part2</servlet-name>
+		<url-pattern>/post_coder</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Lab2Task1Part3</servlet-name>
+		<servlet-class>InformationCaptureGet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Lab2Task1Part3</servlet-name>
+		<url-pattern>/get_coders</url-pattern>
+	</servlet-mapping>
+</web-app>
