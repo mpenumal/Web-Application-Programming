@@ -79,7 +79,7 @@ http.createServer(function (req, res) {
                 }
                 else {
                     var weekdayList = qsWeekday.split(" ");
-                    var clientWeekdayList = array[i]['weekday'].split(",");
+                    var clientWeekdayList = array[i]['weekday'];
                     for (var j = 0; j < weekdayList.length; j++) {
                         for (var k = 0; k < clientWeekdayList.length; k++) {
                             if (clientWeekdayList[k].toUpperCase() == weekdayList[j].toUpperCase()) {

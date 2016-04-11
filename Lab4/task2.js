@@ -1,7 +1,5 @@
 
 var express = require('express'),
-    url = require('url'),
-    q = require('querystring'),
     ejs = require('ejs'),
     bodyParser = require('body-parser');
 var router = express.Router();
@@ -24,15 +22,11 @@ app.get('/', function (req, res) {
 });
 
 app.get('/coders*', function (req, res) {
-
-    var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
-
-    var qs = q.parse(url.parse(req.url).query);
-    qsFirstName = qs['firstname'];
-    qsLastName = qs['lastname'];
-    qsLanguage = qs['language'];
-    qsWeekday = qs['weekday'];
-    qsLocation = qs['location'];
+    qsFirstName = req.query['firstname'];
+    qsLastName = req.query['lastname'];
+    qsLanguage = req.query['language'];
+    qsWeekday = req.query['weekday'];
+    qsLocation = req.query['location'];
 
     var page = '<html><head><title>Information Accumulator HTTP</title></head>';
     if (req.headers['user-agent'].includes('Chrome')) {
@@ -83,7 +77,7 @@ app.get('/coders*', function (req, res) {
         }
         else {
             var weekdayList = qsWeekday.split(" ");
-            var clientWeekdayList = array[i]['weekday'].split(",");
+            var clientWeekdayList = array[i]['weekday'];
             for (var j = 0; j < weekdayList.length; j++) {
                 for (var k = 0; k < clientWeekdayList.length; k++) {
                     if (clientWeekdayList[k].toUpperCase() == weekdayList[j].toUpperCase()) {
@@ -104,15 +98,16 @@ app.get('/coders*', function (req, res) {
         if (fnflag == 1 && lnflag == 1 && langflag == 1 && dayflag == 1 && locflag == 1) {
             selectedClients.push(i);
         }
-
-        for (var i = 0; i < selectedClients.length; i++) {
-            page += 'First Name: ' + array[selectedClients[i]]['firstname'] + '<br/>';
-            page += 'Last Name: ' + array[selectedClients[i]]['lastname'] + '<br/>';
-            page += 'Known Languages: ' + array[selectedClients[i]]['language'] + '<br/>';
-            page += 'Available days of the week: ' + array[selectedClients[i]]['weekday'] + '<br/>';
-            page += 'Accesible Location: ' + array[selectedClients[i]]['location'] + '<br/><br/>';
-        }
     }
+    for (var i = 0; i < selectedClients.length; i++) {
+        page += 'First Name: ' + array[selectedClients[i]]['firstname'] + '<br/>';
+        page += 'Last Name: ' + array[selectedClients[i]]['lastname'] + '<br/>';
+        page += 'Known Languages: ' + array[selectedClients[i]]['language'] + '<br/>';
+        page += 'Available days of the week: ' + array[selectedClients[i]]['weekday'] + '<br/>';
+
+        page += 'Accesible Location: ' + array[selectedClients[i]]['location'] + '<br/><br/>';
+    }
+
     page += '</body></html>';
 
     res.status(200);
