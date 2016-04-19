@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Landing Page EJS</title>
+	</head>
+	<body>
+		<form name="Landing Page" method="post" action="post_info_capture1">
+			<br>
+			Welcome <%= username %> <br><br>
+			
+			<% if (saveresult.length > 0 && saveresult == "success") { %>
+				User information saved successfully.<br><br>
+			<% } %>
+			<% if (saveresult.length > 0 && saveresult == "fail") { %>
+				User information not saved as all the attributes did not have an associated value.<br><br>
+			<% } %>
+			<% if (saveresult.length > 0 && saveresult == "cancel") { %>
+				User information not saved as "Cancel" was selected.<br><br>
+			<% } %>
+			<% if (match.length > 0 && match == "positive") { %>
+				List of the top 3 matches closest to each of your preferences:<br><br>
+				Known Languages:<br>
+				<ul>
+					<% for(var i=0; i<languagematch.length; i++) {%>
+					<li><%= languagematch[i] %></li>
+					<% } %>
+				</ul>
+				<br><br>
+				Available days of the week:<br>
+				<ul>
+					<% for(var i=0; i<weekdaymatch.length; i++) {%>
+					<li><%= weekdaymatch[i] %></li>
+					<% } %>
+				</ul>
+				<br><br>
+				Accesible Location:<br>
+				<ul>
+					<% for(var i=0; i<locationmatch.length; i++) {%>
+					<li><%= locationmatch[i] %></li>
+					<% } %>
+				</ul>
+				<br><br>
+			<% } %>
+			<% if (match.length > 0 && match == "negative") { %>
+				No preferences available.<br><br>
+			<% } %>
+			Want to add information? <input type="submit" value="Click Here!"><br>
+		</form>
+	</body>
+</html>

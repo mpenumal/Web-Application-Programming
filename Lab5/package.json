@@ -1,0 +1,19 @@
+{
+  "name": "lab5task1",
+  "version": "1.0.0",
+  "description": "Class assignment - Lab5 Task1",
+  "main": "task1.js",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "cookie-parser": "^1.4.1",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Manohara Rao Penumala",
+  "license": "ISC"
+}

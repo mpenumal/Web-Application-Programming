@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Search Results EJS</title>
+	</head>
+	<body>
+		<% if (display.length > 0 && display == "true") { %>
+			Search Results:<br>
+				<ul>
+					<% for(var i=0; i<searchResults.length; i++) {%>
+					<li><%= searchResults[i] %></li>
+					<% } %>
+				</ul>
+				<br><br>
+		
+		<% } %>
+		<% if (display.length > 0 && display == "false") { %>
+			No Matches available.<br><br>
+		<% } %>
+	
+	</body>
+</html>
