@@ -19,7 +19,7 @@ app.listen(8081);
 
 User = require('./models/userModel');
 
-mongoose.connect('mongodb://localhost/userinfo');
+mongoose.connect('mongodb://localhost/userhaha');
 var db = mongoose.connection;
 
 function loginLogic(req, res, login_type) {

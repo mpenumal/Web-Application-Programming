@@ -1,4 +1,3 @@
-
 var express = require('express'),
     ejs = require('ejs'),
     bodyParser = require('body-parser'),
@@ -357,7 +356,7 @@ function TopMatches(req, res, name, login_type) {
             }
 
             res.render('EJSTopMatches.ejs', {username: (name[0] + ' ' + name[1]), saveresult: saveresult,
-                match: 'positive', languagematch: langMatches, weekdaymatch: dayMatches, locationmatch: locMatches},
+                    match: 'positive', languagematch: langMatches, weekdaymatch: dayMatches, locationmatch: locMatches},
                 function (err, html) {
                     if (err) {
                         req.session.err = err.status;
